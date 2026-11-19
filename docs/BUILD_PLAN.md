@@ -1,7 +1,5 @@
 # Kurogane K-7 — Modular Build Plan
 
-Snapshot of the living build plan, exported 2026-11-20. Live version:
-https://claude.ai/artifact/Lcem7ovWy82eThDXrzkpSc
 
 ## Concept and key specs
 
@@ -157,7 +155,7 @@ Six boards, each replaceable on its own. Only the mainboard is hard; start every
 
 ## Enclosure and mechanical
 
-The look follows the uConsole: a portrait slab with an antenna crown on top, the 7-inch screen, a gamepad strip, a compact keyboard and a battery grip at the bottom, finished in bare bead-blasted aluminium with exposed screws. The core is 212 × 252 × 34 mm; with a module on each side rail it is 280 mm wide. The screen frame sets the width: the Touch Display 2 measures 189.32 × 120.24 mm overall. For comparison, Waveshare's [PocketTerm35](https://docs.waveshare.com/PocketTerm35) is 93.5 × 168.5 × 37 mm around a 3.5-inch screen. Every dimension below is a parameter in `enclosure/kurogane_k7.scad`; renders are in `mockup/`.
+The look follows the uConsole: a portrait slab with an antenna crown on top, the 7-inch screen, a gamepad strip, a compact keyboard and a battery grip at the bottom, finished in bare bead-blasted aluminium with exposed screws. The core is 212 × 252 × 34 mm; with a module on each side rail it is 280 mm wide. The screen frame sets the width: the Touch Display 2 measures 189.32 × 120.24 mm overall. For comparison, Waveshare's [PocketTerm35](https://docs.waveshare.com/PocketTerm35) is 93.5 × 168.5 × 37 mm around a 3.5-inch screen. Every dimension below is a parameter in `enclosure/kurogane_k7.scad`; images are in `images/`.
 
 | Zone (front, top to bottom) | Height (mm) | Contents |
 | --- | --- | --- |

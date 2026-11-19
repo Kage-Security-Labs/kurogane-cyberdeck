@@ -7,5 +7,4 @@
 - Parametric OpenSCAD enclosure: front and back shells, battery grip, module sled, bay cover.
 - Software stubs: `config.txt.example`, `deckbusd`.
 - Named Kurogane K-7 (previously DECK-7M), by Kage Security Lab.
-- Animated README renders (hero + exploded GIFs) and their generator.
-- Design mockups: front, rear, bare-metal finish, populated boards, exploded view.
+- Product images: animated front view and exploded view.

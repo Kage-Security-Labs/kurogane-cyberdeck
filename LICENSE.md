@@ -6,7 +6,7 @@ Kurogane K-7 uses a different license for each kind of file.
 |------|-------|---------|------|
 | Hardware design files | `hardware/`, `enclosure/`, `bom/` | CERN Open Hardware Licence v2, Strongly Reciprocal | `CERN-OHL-S-2.0` |
 | Software and tools | `software/`, `tools/` | MIT License | `MIT` |
-| Documentation and renders | `docs/`, `mockup/`, `README.md` | Creative Commons Attribution-ShareAlike 4.0 | `CC-BY-SA-4.0` |
+| Documentation and images | `docs/`, `images/`, `README.md` | Creative Commons Attribution-ShareAlike 4.0 | `CC-BY-SA-4.0` |
 
 Full texts:
 
