@@ -1,0 +1,33 @@
+# KiCad
+*-backups/
+*.kicad_prl
+*.lck
+~*.lck
+fp-info-cache
+_autosave-*
+*.bak
+*.000
+*-cache.lib
+*.kicad_sch-bak
+*.kicad_pcb-bak
+# fabrication outputs (attach to GitHub Releases instead)
+hardware/**/production/
+hardware/**/gerbers/
+hardware/**/*.zip
+
+# OpenSCAD / 3D exports (publish via Releases)
+enclosure/*.stl
+enclosure/*.3mf
+enclosure/*.step
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

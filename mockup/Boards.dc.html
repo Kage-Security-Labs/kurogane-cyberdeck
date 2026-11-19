@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kurogane K-7 input board, module, pogo board and battery</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#ff8a1f}a:hover{color:#ffb066}
+</style>
+</helmet>
+<div style="position: relative; width: 1400px; height: 1100px; background: #1a1b1d; font-family: 'Space Grotesk', system-ui, sans-serif; overflow: hidden; color: #e8e8e8">
+
+  <div style="position: absolute; left: 40px; top: 34px; font-size: 30px; font-weight: 700">Input board, DeckBus boards and battery pack</div>
+  <div style="position: absolute; left: 40px; top: 76px; font-size: 14px; color: #a9aeb4">All to scale at 4.5 px per mm. Same solder-mask finish as the mainboard.</div>
+
+  <div style="position: absolute; left: 40px; top: 122px; font-size: 13px; letter-spacing: 2px; color: #ff8a1f; font-weight: 700">INPUT BOARD · 196 × 112 mm · 2 LAYERS · RP2040 + QMK</div>
+  <div style="position: absolute; left: 40px; top: 150px; width: 882px; height: 504px; background: {{mask}}; border-radius: 13px; box-shadow: 0 0 0 1px #2c2f33, 0 20px 50px rgba(0,0,0,0.5)"></div>
+  <svg width="882" height="504" viewBox="0 0 196 112" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 40px; top: 150px">
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="0.35">
+      <path d="M3 48.4H193M3 62H193M3 75.6H193M3 89.2H193M3 102.8H193"/>
+      <path d="M14.5 38V106M29.1 38V106M43.7 38V106M58.3 38V106M72.9 38V106M87.5 38V106M102.1 38V106M116.7 38V106M131.3 38V106M145.9 38V106M160.5 38V106M175.1 38V106M189.7 38V106"/>
+      <path d="M98 26V34H160V92M98 104V96H150"/>
+    </g>
+  </svg>
+  <sc-for list="{{kb}}" as="p" hint-placeholder-count="200">
+    <div style="position: absolute; left: {{p.l}}px; top: {{p.t}}px; width: {{p.w}}px; height: {{p.h}}px; background: {{p.bg}}; border: {{p.bd}}; border-radius: {{p.r}}; color: {{p.c}}; font-size: {{p.fs}}px; opacity: {{p.op}}; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1; overflow: hidden; font-family: 'JetBrains Mono', monospace; font-weight: 600">{{p.label}}</div>
+  </sc-for>
+
+  <div style="position: absolute; left: 960px; top: 122px; font-size: 13px; letter-spacing: 2px; color: #ff8a1f; font-weight: 700">DECKBUS MODULE 28 × 100</div>
+  <div style="position: absolute; left: 960px; top: 150px; width: 126px; height: 450px; background: {{mask}}; border-radius: 9px; box-shadow: 0 0 0 1px #2c2f33"></div>
+  <div style="position: absolute; left: 1110px; top: 150px; width: 126px; height: 450px; background: {{mask}}; border-radius: 9px; box-shadow: 0 0 0 1px #2c2f33"></div>
+  <div style="position: absolute; left: 960px; top: 608px; width: 126px; text-align: center; font-size: 11px; color: #a9aeb4">inner face (pads)</div>
+  <div style="position: absolute; left: 1110px; top: 608px; width: 126px; text-align: center; font-size: 11px; color: #a9aeb4">outer face (GNSS example)</div>
+
+  <div style="position: absolute; left: 1262px; top: 122px; font-size: 13px; letter-spacing: 2px; color: #ff8a1f; font-weight: 700">BAY POGO</div>
+  <div style="position: absolute; left: 1262px; top: 150px; width: 63px; height: 171px; background: {{mask}}; border-radius: 6px; box-shadow: 0 0 0 1px #2c2f33"></div>
+  <div style="position: absolute; left: 1250px; top: 330px; width: 120px; font-size: 11px; line-height: 16px; color: #a9aeb4">14 × 38 mm, one per side wall. 2 × 10 spring pins, FPC to mainboard.</div>
+  <sc-for list="{{mods}}" as="p" hint-placeholder-count="60">
+    <div style="position: absolute; left: {{p.l}}px; top: {{p.t}}px; width: {{p.w}}px; height: {{p.h}}px; background: {{p.bg}}; border: {{p.bd}}; border-radius: {{p.r}}; color: {{p.c}}; font-size: {{p.fs}}px; opacity: {{p.op}}; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1; overflow: hidden; font-family: 'JetBrains Mono', monospace; font-weight: 600">{{p.label}}</div>
+  </sc-for>
+
+  <div style="position: absolute; left: 40px; top: 722px; font-size: 13px; letter-spacing: 2px; color: #ff8a1f; font-weight: 700">BATTERY PACK · 2S2P 18650 · 7.2 V · 43 Wh · LIVES IN THE REAR GRIP</div>
+  <div style="position: absolute; left: 40px; top: 940px; font-size: 11px; letter-spacing: 1px; color: #a9aeb4">PACK PCB 135 × 12 mm, 2 oz copper</div>
+  <div style="position: absolute; left: 40px; top: 960px; width: 608px; height: 54px; background: {{mask}}; border-radius: 6px; box-shadow: 0 0 0 1px #2c2f33"></div>
+  <sc-for list="{{bat}}" as="p" hint-placeholder-count="20">
+    <div style="position: absolute; left: {{p.l}}px; top: {{p.t}}px; width: {{p.w}}px; height: {{p.h}}px; background: {{p.bg}}; border: {{p.bd}}; border-radius: {{p.r}}; color: {{p.c}}; font-size: {{p.fs}}px; opacity: {{p.op}}; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1; overflow: hidden; font-family: 'JetBrains Mono', monospace; font-weight: 600">{{p.label}}</div>
+  </sc-for>
+
+  <div style="position: absolute; left: 720px; top: 722px; width: 640px; display: flex; flex-direction: column; gap: 10px">
+    <div style="font-size: 13px; letter-spacing: 2px; color: #ff8a1f; font-weight: 700">BOARD SET</div>
+    <sc-for list="{{set}}" as="b" hint-placeholder-count="6">
+      <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; background: #232528; border-radius: 6px; font-size: 13px">
+        <div style="font-weight: 600">{{b.n}}</div>
+        <div style="color: #a9aeb4; font-size: 12px; text-align: right">{{b.d}}</div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mask":{"editor":"color","default":"#0f1011","options":["#0f1011","#0b3d2a","#2b1a4a","#123a5a"]},"$preview":{"width":1400,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const S = 4.5;
+    const K = {
+      ic: { bg: '#1a1a1c', bd: '1px solid #44474b', c: '#d6d6d6', r: '2px' },
+      conn: { bg: 'linear-gradient(180deg,#dfe2e6,#959ba2)', bd: '1px solid #6d7178', c: '#1b1b1b', r: '2px' },
+      shield: { bg: 'linear-gradient(135deg,#eceef0,#a7acb2)', bd: '1px solid #7d828a', c: '#262626', r: '3px' },
+      fpc: { bg: 'linear-gradient(180deg,#e6dcc0,#c9bc98)', bd: '1px solid #8a7f63', c: '#3a3326', r: '2px' },
+      cap: { bg: '#b89a64', bd: 'none', c: '#000', r: '1px' },
+      res: { bg: '#141414', bd: '1px solid #3b3b3e', c: '#cfcfcf', r: '1px' },
+      tact: { bg: 'radial-gradient(circle,#1d1d1f 0%,#1d1d1f 36%,#c9ced4 40%,#8d939a 100%)', bd: '1px solid #55585c', c: '#000', r: '1px' },
+      diode: { bg: 'linear-gradient(90deg,#151515 0%,#151515 72%,#c9ced4 72%)', bd: 'none', c: '#000', r: '1px' },
+      hole: { bg: 'radial-gradient(circle,#1a1b1d 0%,#1a1b1d 50%,#d4a64a 52%,#d4a64a 100%)', bd: 'none', c: '#000', r: '50%' },
+      pad: { bg: 'linear-gradient(135deg,#f0cf7a,#c3933a)', bd: 'none', c: '#000', r: '2px' },
+      tp: { bg: '#d4a64a', bd: 'none', c: '#000', r: '50%' },
+      pogo: { bg: 'radial-gradient(circle,#f0cf7a 0%,#d4a64a 34%,#0c0c0c 38%)', bd: 'none', c: '#000', r: '50%' },
+      housing: { bg: '#0c0c0c', bd: '1px solid #33363a', c: '#888', r: '2px' },
+      breakout: { bg: '#121212', bd: '1px solid #d4a64a', c: '#ddd', r: '4px' },
+      ball: { bg: 'radial-gradient(circle at 35% 35%,#ffffff 0%,#d9dce0 40%,#8d939a 100%)', bd: 'none', c: '#000', r: '50%' },
+      ghost: { bg: 'rgba(255,255,255,0.05)', bd: '1px dashed rgba(255,255,255,0.5)', c: 'rgba(255,255,255,0.75)', r: '3px' },
+      silk: { bg: 'transparent', bd: 'none', c: '#f2f2f2', r: '0' },
+      cell: { bg: 'linear-gradient(180deg,#3aa5c8 0%,#1d6f8c 55%,#0f4a5e 100%)', bd: '1px solid #0b3646', c: '#e8f6fb', r: '40px' },
+      nickel: { bg: 'linear-gradient(90deg,#d7dbe0,#9aa0a7)', bd: 'none', c: '#000', r: '1px' },
+      wire: { bg: '#c8322f', bd: 'none', c: '#000', r: '2px' }
+    };
+    const mk = (ox, oy) => (x, y, w, h, k, label, fsOver, op) => {
+      const s = K[k];
+      let fs = Math.max(6, Math.min(11, Math.min(w, h) * S * 0.36));
+      if (k === 'silk') fs = 8;
+      if (fsOver) fs = fsOver;
+      return { l: ox + x * S, t: oy + y * S, w: w * S, h: h * S, bg: s.bg, bd: s.bd, r: s.r, c: s.c, fs: fs, op: op || 1, label: label || '' };
+    };
+
+    // ---------------- input board
+    const P = mk(40, 150);
+    const kb = [];
+    [[3.5, 3.5], [192.5, 3.5], [3.5, 108.5], [192.5, 108.5]].forEach((h) => kb.push(P(h[0] - 2.7, h[1] - 2.7, 5.4, 5.4, 'hole', '')));
+    const rows = [
+      ['Esc', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', 'Bksp'],
+      ['Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '[', ']'],
+      ['Ctrl', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ';', "'", 'Ent'],
+      ['Shft', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', ',', '.', '/', 'Up', 'Shft'],
+      ['Fn', 'Ctrl', 'Alt', 'Sup', 'Space', 'Alt', 'Lt', 'Dn', 'Rt']
+    ];
+    const px = 14.6, py = 13.6, x0 = (196 - 13 * px) / 2, y0 = 38;
+    rows.forEach((row, r) => {
+      let col = 0;
+      row.forEach((lab, i) => {
+        const span = (r === 4 && i === 4) ? 5 : 1;
+        const cx = x0 + (col + span / 2) * px, cy = y0 + (r + 0.5) * py;
+        kb.push(P(cx - 2.6, cy - 2.6, 5.2, 5.2, 'tact', ''), P(cx + 3.6, cy + 3.2, 2.6, 1.3, 'diode', ''), P(cx - 7, cy - 6.6, 14, 2.6, 'silk', lab, 7));
+        col += span;
+      });
+    });
+    [['UP', 22, 8], ['DN', 22, 24], ['LT', 14, 16], ['RT', 30, 16], ['L', 48, 10], ['R', 56, 22], ['M1', 86, 30], ['M2', 98, 30], ['M3', 110, 30],
+     ['SEL', 132, 12], ['STA', 132, 22], ['X', 170, 6], ['Y', 160, 16], ['A', 180, 16], ['B', 170, 26], ['PWR', 188, 22]].forEach((b) => {
+      kb.push(P(b[1] - 2.6, b[2] - 2.6, 5.2, 5.2, 'tact', ''), P(b[1] + 2.9, b[2] - 1.2, 6, 2.4, 'silk', b[0], 7));
+    });
+    kb.push(
+      P(85.5, 4, 25, 22, 'breakout', ''), P(92, 9, 12, 12, 'ball', ''), P(86.5, 22, 23, 3, 'silk', 'PIM447', 7),
+      P(150, 90, 22, 14, 'ghost', 'RP2040 (bottom)', 8, 0.9),
+      P(84, 106.5, 28, 4.5, 'fpc', 'TO MAINBOARD 10P'),
+      P(140, 2, 40, 2.6, 'silk', 'KUROGANE K-7 INPUT REV A', 7)
+    );
+
+    // ---------------- module inner, outer, pogo board
+    const mods = [];
+    const MI = mk(960, 150), MO = mk(1110, 150), PG = mk(1262, 150);
+    [[14, 6], [14, 94]].forEach((h) => { mods.push(MI(h[0] - 1.9, h[1] - 1.9, 3.8, 3.8, 'hole', '')); mods.push(MO(h[0] - 1.9, h[1] - 1.9, 3.8, 3.8, 'hole', '')); });
+    for (let i = 0; i < 20; i++) {
+      const r = Math.floor(i / 2), c = i % 2;
+      mods.push(MI(14 + (c - 0.5) * 2.54 - 0.9, 50 + (r - 4.5) * 2.54 - 0.9, 1.8, 1.8, 'pad', ''));
+    }
+    mods.push(
+      MI(4, 36, 7, 2.4, 'silk', 'PIN 1', 6), MI(9, 18, 6, 5, 'ic', '24C32'), MI(17, 19.5, 3, 1.6, 'ic', ''), MI(17, 23, 3, 1.6, 'ic', ''),
+      MI(10, 70, 2, 1.2, 'cap', ''), MI(14, 70, 2, 1.2, 'cap', ''), MI(4, 80, 20, 3, 'silk', 'DECKBUS v1', 7),
+      MO(3, -1, 8, 10, 'conn', 'SMA'), MO(9, 58, 10, 10, 'shield', 'M10S'), MO(5, 72, 3, 3, 'ic', ''), MO(20, 76, 3, 3, 'conn', ''),
+      MO(17, 40, 3, 3, 'ic', 'LDO'), MO(12, 40, 2, 1.2, 'cap', ''), MO(4, 84, 20, 3, 'silk', 'GNSS MODULE', 7)
+    );
+    mods.push(PG(4.4, 4.4, 5.2, 25.6, 'housing', ''));
+    for (let i = 0; i < 20; i++) {
+      const r = Math.floor(i / 2), c = i % 2;
+      mods.push(PG(7 + (c - 0.5) * 2.54 - 0.8, 17.2 + (r - 4.5) * 2.54 - 0.8, 1.6, 1.6, 'pogo', ''));
+    }
+    mods.push(PG(10.6, 6, 2, 1.2, 'ic', ''), PG(10.6, 10, 2, 1.2, 'ic', ''), PG(2, 32, 10, 3.5, 'fpc', 'FPC'));
+
+    // ---------------- battery
+    const BT = mk(40, 750);
+    const bat = [
+      BT(2, 1, 65, 18.6, 'cell', 'MOLICEL P30B · 3000 mAh', 10), BT(68, 1, 65, 18.6, 'cell', 'MOLICEL P30B · 3000 mAh', 10),
+      BT(2, 20.4, 65, 18.6, 'cell', 'MOLICEL P30B · 3000 mAh', 10), BT(68, 20.4, 65, 18.6, 'cell', 'MOLICEL P30B · 3000 mAh', 10),
+      BT(0, 3, 2.2, 34, 'nickel', ''), BT(66.3, 3, 2.4, 34, 'nickel', ''), BT(132.8, 3, 2.2, 34, 'nickel', ''),
+      BT(64, 39.8, 10, 1.4, 'wire', '')
+    ];
+    const PK = mk(40, 960);
+    bat.push(
+      PK(6, 3, 4, 4, 'ic', ''), PK(13, 3, 4, 4, 'ic', ''), PK(21, 2.5, 6, 5, 'ic', 'FET'), PK(31, 3.5, 8, 3, 'res', '10A'),
+      PK(44, 4, 3, 2, 'ic', ''), PK(52, 3, 2, 1.2, 'cap', ''), PK(55, 3, 2, 1.2, 'cap', ''),
+      PK(3, 8.2, 40, 2.4, 'silk', 'S-8252  BQ29209  FUSE  NTC', 7),
+      PK(108, 2, 24, 8, 'conn', '6P TO MAINBOARD'),
+      PK(62, 3, 1.6, 1.6, 'tp', ''), PK(66, 3, 1.6, 1.6, 'tp', ''), PK(70, 3, 1.6, 1.6, 'tp', '')
+    );
+
+    const set = [
+      { n: 'Mainboard', d: '190 × 105 mm, 6 layers, CM5 + power + hubs + M.2' },
+      { n: 'Input board', d: '196 × 112 mm, 2 layers, 61 keys + 16 buttons + trackball' },
+      { n: 'Top IO / antenna board', d: '180 × 22 mm, LEDs, SMA bracket, fan passthrough' },
+      { n: 'Bay pogo board × 2', d: '14 × 38 mm, 2 × 10 spring pins, FPC' },
+      { n: 'Battery pack PCB', d: '135 × 12 mm, protection, balancer, fuse' },
+      { n: 'DeckBus module template', d: '28 × 100 mm, ENIG pads, ID EEPROM' }
+    ];
+    return { mask: this.props.mask ?? '#0f1011', kb: kb, mods: mods, bat: bat, set: set };
+  }
+}
+</script>
+</body>
+</html>

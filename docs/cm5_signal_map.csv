@@ -1,0 +1,22 @@
+cm5_interface,destination,mainboard_sheet,netclass,notes
+PCIe Gen2 x1,M.2 M-key 2230/2242 NVMe,Storage_Modem,PCIe_85R,AC caps on TX near CM5; CLKREQ# and PERST# routed
+USB3 port 0,VL817 USB3 hub upstream,USB_Hubs,USB3_90R,Hub ports: M.2 B modem / rear USB-A / left USB-A / internal USB-C
+USB3 port 1,Right-side USB-C host port,IO_Ports,USB3_90R,VBUS 1.5 A current-limited from +5V_B
+USB2 (OTG),TS3USB221 mux -> USB2514B hub or charge-port USB-C,USB_Hubs,USB2_90R,Mux select = BOOT switch (nRPIBOOT)
+MIPI1 4-lane,22-pin DSI FPC -> Touch Display 2,Display_Camera,MIPI_100R,Display touch I2C on the same FPC
+MIPI0 4-lane,22-pin CSI FPC (optional camera),Display_Camera,MIPI_100R,
+HDMI0,Full-size HDMI type A,IO_Ports,Default,ESD + 5 V 55 mA
+Gigabit Ethernet MDI,RJ45 with magnetics,IO_Ports,Default,100 ohm pairs
+GPIO2/GPIO3 (I2C1),BQ25792 0x6B / LTC2944 0x64 / WM8960 0x1A / PCA9546A 0x70,Power + Audio + DeckBus,Default,Check address clashes on your exact parts
+GPIO18-21 (I2S),WM8960,Audio,Default,BCLK/LRCLK/DIN/DOUT
+UART2,DeckBus L,DeckBus,Default,
+UART3,DeckBus R,DeckBus,Default,
+GPIO (2 per bay),DeckBus GPIO A/B,DeckBus,Default,
+GPIO (1 per bay),MOD_DET# sense,DeckBus,Default,
+GPIO,Jack detect,Audio,Default,
+GPIO,Modem W_DISABLE# / FULL_CARD_POWER_OFF# / RESET#,Storage_Modem,Default,
+PWR_BUT,Keyboard power key via FPC,Keyboard_GPIO,Default,Works with RP2040 unpowered
+FAN_PWM / FAN_TACH,30 mm blower header,IO_Ports,Default,
+RTC VBAT,ML2032 holder,IO_Ports,Default,
+40-pin GPIO,Internal HAT header,Keyboard_GPIO,Default,Shared pins with the above: assign before layout
+Wi-Fi/BT,CM5 U.FL -> SMA pigtail,(none),,No PCB routing

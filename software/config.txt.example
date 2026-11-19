@@ -1,0 +1,30 @@
+# Kurogane K-7 rev A - /boot/firmware/config.txt additions (starting point, verify each line)
+# Raspberry Pi OS 64-bit, Bookworm or newer.
+
+[all]
+# Touch Display 2 on the DSI port you route. Check the current overlay name and its
+# dsi0/dsi1 parameter in the Raspberry Pi display documentation before first boot.
+#dtoverlay=vc4-kms-dsi-ili9881-7inch,dsi1
+
+# I2C1 for charger, fuel gauge, codec, DeckBus mux
+dtparam=i2c_arm=on
+dtparam=i2c_arm_baudrate=100000
+
+# I2S audio: WM8960 codec (use the overlay that matches your kernel)
+dtparam=i2s=on
+#dtoverlay=wm8960-soundcard
+
+# Fuel gauge (in-kernel ltc2941-battery-gauge driver, compatible "lltc,ltc2944").
+# Write a small overlay: software/overlays/kurogane-ltc2944.dts (sense resistor 10000 uOhm,
+# prescaler per datasheet). Placeholder:
+#dtoverlay=kurogane-ltc2944
+
+# PCIe NVMe
+dtparam=pciex1
+#dtparam=pciex1_gen=3   # Gen 3 is out of spec; test before trusting it
+
+# DeckBus UARTs
+dtoverlay=uart2
+dtoverlay=uart3
+
+# Fan on the CM5 fan header uses the default cooling_fan trip points; tune after Phase 4.

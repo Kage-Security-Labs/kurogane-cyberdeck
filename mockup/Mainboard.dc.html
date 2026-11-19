@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kurogane K-7 mainboard, populated</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#ff8a1f}a:hover{color:#ffb066}
+</style>
+</helmet>
+<div style="position: relative; width: 1100px; height: 1460px; background: #1a1b1d; font-family: 'Space Grotesk', system-ui, sans-serif; overflow: hidden; color: #e8e8e8">
+
+  <div style="position: absolute; left: 75px; top: 34px; font-size: 30px; font-weight: 700">Mainboard rev A · 190 × 105 mm · 6 layers</div>
+  <div style="position: absolute; left: 75px; top: 76px; font-size: 14px; color: #a9aeb4">CM5 carrier, every part placed to scale (5 px per mm). Sits behind the 7 in display.</div>
+  <div style="position: absolute; left: 75px; top: 104px; display: flex; gap: 18px; font-size: 12px; color: #c9ccd0">
+    <div style="display: flex; gap: 6px; align-items: center"><div style="width: 12px; height: 12px; background: #1a1a1c; border: 1px solid #55585c"></div><div>IC</div></div>
+    <div style="display: flex; gap: 6px; align-items: center"><div style="width: 12px; height: 12px; background: #b9bec4"></div><div>Connector / shield</div></div>
+    <div style="display: flex; gap: 6px; align-items: center"><div style="width: 12px; height: 12px; background: #d9cfb4"></div><div>FPC</div></div>
+    <div style="display: flex; gap: 6px; align-items: center"><div style="width: 12px; height: 12px; background: #45484d"></div><div>Inductor</div></div>
+    <div style="display: flex; gap: 6px; align-items: center"><div style="width: 12px; height: 12px; background: #d4a64a; border-radius: 6px"></div><div>ENIG pad / test point</div></div>
+    <div style="display: flex; gap: 6px; align-items: center"><div style="width: 12px; height: 12px; background: #0d5a3a"></div><div>Module / M.2 card</div></div>
+  </div>
+
+  <div style="position: absolute; left: 75px; top: 128px; font-size: 13px; letter-spacing: 2px; color: #ff8a1f; font-weight: 700">TOP SIDE · FACES THE DISPLAY</div>
+  <div style="position: absolute; left: 75px; top: 150px; width: 950px; height: 525px; background: {{mask}}; border-radius: 20px; box-shadow: 0 0 0 1px #2c2f33, 0 20px 50px rgba(0,0,0,0.5)"></div>
+  <svg width="950" height="525" viewBox="0 0 190 105" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 75px; top: 150px">
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="0.35">
+      <path d="M82 30V14M84 30V14M86 30V14M88 30V14M90 30V14M92 30V14M94 30V14M96 30V14"/>
+      <path d="M123 38H129V20H132M123 40H130V22H132M123 44H140V20M123 46H142V20"/>
+      <path d="M123 52H150V18H156M123 54H152V20H156"/>
+      <path d="M123 60H180V26H182M123 62H178V28H182"/>
+      <path d="M123 64H176V42M123 66H174V44"/>
+      <path d="M68 40H20V24H8M68 42H22V36H14M68 48H12V52M68 56H24V66H21M68 58H26V68H21"/>
+      <path d="M68 64H40V74H31M68 66H42V76H31"/>
+      <path d="M100 70V96M102 70V96M104 70V96"/>
+      <path d="M135 20V41M150 20V41"/>
+      <path d="M48 83V88M147 85V90"/>
+    </g>
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.11" stroke-width="1.6">
+      <path d="M17 32V22M31 32V22M47 32H68M45 37H66V45"/>
+      <path d="M12 56V45"/>
+    </g>
+  </svg>
+  <sc-for list="{{top}}" as="p" hint-placeholder-count="90">
+    <div style="position: absolute; left: {{p.l}}px; top: {{p.t}}px; width: {{p.w}}px; height: {{p.h}}px; background: {{p.bg}}; border: {{p.bd}}; border-radius: {{p.r}}; color: {{p.c}}; font-size: {{p.fs}}px; opacity: {{p.op}}; writing-mode: {{p.wm}}; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1; overflow: hidden; font-family: 'JetBrains Mono', monospace; font-weight: 600">{{p.label}}</div>
+  </sc-for>
+
+  <div style="position: absolute; left: 75px; top: 818px; font-size: 13px; letter-spacing: 2px; color: #ff8a1f; font-weight: 700">BOTTOM SIDE · SEEN FROM THE BACK HATCH (MIRRORED)</div>
+  <div style="position: absolute; left: 75px; top: 845px; width: 950px; height: 525px; background: {{mask}}; border-radius: 20px; box-shadow: 0 0 0 1px #2c2f33, 0 20px 50px rgba(0,0,0,0.5)"></div>
+  <svg width="950" height="525" viewBox="0 0 190 105" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 75px; top: 845px">
+    <g fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="0.35">
+      <path d="M95 68V75M97 68V75M99 68V75M101 68V75"/>
+      <path d="M68 50H62V62H52M68 52H60V60H52"/>
+      <path d="M30 50H20V72M28 52H18V72"/>
+      <path d="M150 74V88M152 74V88"/>
+    </g>
+  </svg>
+  <sc-for list="{{bottom}}" as="p" hint-placeholder-count="40">
+    <div style="position: absolute; left: {{p.l}}px; top: {{p.t}}px; width: {{p.w}}px; height: {{p.h}}px; background: {{p.bg}}; border: {{p.bd}}; border-radius: {{p.r}}; color: {{p.c}}; font-size: {{p.fs}}px; opacity: {{p.op}}; writing-mode: {{p.wm}}; box-sizing: border-box; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1; overflow: hidden; font-family: 'JetBrains Mono', monospace; font-weight: 600">{{p.label}}</div>
+  </sc-for>
+
+  <div style="position: absolute; left: 75px; top: 1396px; width: 950px; display: flex; justify-content: space-between; font-size: 12px; color: #a9aeb4">
+    <div>Placement follows the zones in hardware/mainboard/kurogane_mainboard.kicad_pcb. Concept render, not a routed layout.</div>
+    <div>Tweaks: solder-mask colour, CM5 fitted or removed</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"mask":{"editor":"color","default":"#0f1011","options":["#0f1011","#0b3d2a","#2b1a4a","#123a5a"]},"showModule":{"editor":"boolean","default":true},"$preview":{"width":1100,"height":1460}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const S = 5, W = 190;
+    const K = {
+      ic: { bg: '#1a1a1c', bd: '1px solid #44474b', c: '#d6d6d6', r: '2px' },
+      conn: { bg: 'linear-gradient(180deg,#dfe2e6,#959ba2)', bd: '1px solid #6d7178', c: '#1b1b1b', r: '2px' },
+      shield: { bg: 'linear-gradient(135deg,#eceef0,#a7acb2)', bd: '1px solid #7d828a', c: '#262626', r: '3px' },
+      fpc: { bg: 'linear-gradient(180deg,#e6dcc0,#c9bc98)', bd: '1px solid #8a7f63', c: '#3a3326', r: '2px' },
+      header: { bg: 'repeating-linear-gradient(90deg,#0c0c0c 0px,#0c0c0c 3.5px,#d4a64a 3.5px,#d4a64a 9px,#0c0c0c 9px,#0c0c0c 12.7px)', bd: '1px solid #000', c: '#fff', r: '1px' },
+      ind: { bg: '#45484d', bd: '1px solid #2a2c2f', c: '#e6e6e6', r: '4px' },
+      cap: { bg: '#b89a64', bd: 'none', c: '#000', r: '1px' },
+      ecap: { bg: 'radial-gradient(circle,#dfe2e6 0%,#a9aeb4 55%,#6d7178 100%)', bd: '1px solid #55585c', c: '#1b1b1b', r: '50%' },
+      res: { bg: '#141414', bd: '1px solid #3b3b3e', c: '#cfcfcf', r: '1px' },
+      xtal: { bg: 'linear-gradient(180deg,#e8eaed,#aab0b6)', bd: '1px solid #7d828a', c: '#222', r: '1px' },
+      module: { bg: '#0d5a3a', bd: '1px solid #23845a', c: '#cfe', r: '6px' },
+      card: { bg: '#0f4a33', bd: '1px solid #2c6b4f', c: '#d8efe4', r: '3px' },
+      hole: { bg: 'radial-gradient(circle,#1a1b1d 0%,#1a1b1d 50%,#d4a64a 52%,#d4a64a 100%)', bd: 'none', c: '#000', r: '50%' },
+      tp: { bg: '#d4a64a', bd: 'none', c: '#000', r: '50%' },
+      silk: { bg: 'transparent', bd: 'none', c: '#f2f2f2', r: '0' },
+      zone: { bg: 'transparent', bd: '1px dashed rgba(255,255,255,0.45)', c: 'rgba(255,255,255,0.75)', r: '6px' }
+    };
+    const mk = (ox, oy, mirror) => (x, y, w, h, k, label, fsOver) => {
+      if (mirror) x = W - x - w;
+      const s = K[k];
+      const vert = !!label && h > w * 1.6 && k !== 'silk';
+      let fs = Math.max(6, Math.min(11, Math.min(w, h) * S * 0.36));
+      if (vert) fs = Math.max(6, Math.min(11, w * S * 0.42));
+      if (k === 'silk') fs = 9;
+      if (fsOver) fs = fsOver;
+      return { l: ox + x * S, t: oy + y * S, w: w * S, h: h * S, bg: s.bg, bd: s.bd, r: s.r, c: s.c, fs: fs, op: 1, wm: vert ? 'vertical-rl' : 'horizontal-tb', label: label || '' };
+    };
+    const holes = (P) => [[4, 4], [186, 4], [4, 101], [186, 101], [95, 4], [95, 101]].map((h) => P(h[0] - 2.7, h[1] - 2.7, 5.4, 5.4, 'hole', ''));
+
+    // ---------------- top side
+    const P = mk(75, 150, false);
+    const top = [].concat(holes(P));
+    if (this.props.showModule ?? true) {
+      top.push(
+        P(68, 30, 55, 40, 'module', ''),
+        P(80, 34, 15, 15, 'shield', 'BCM2712'),
+        P(98, 34, 13, 15, 'ic', 'LPDDR4X 8GB'),
+        P(70, 50, 12, 12, 'ic', 'eMMC 32G'),
+        P(85, 51, 7, 7, 'ic', 'PMIC'),
+        P(98, 51, 15, 12, 'shield', 'Wi-Fi/BT'),
+        P(113, 64, 3, 3, 'conn', ''),
+        P(70.4, 32.4, 2.2, 2.2, 'tp', ''), P(118.4, 32.4, 2.2, 2.2, 'tp', ''), P(70.4, 65.4, 2.2, 2.2, 'tp', ''), P(118.4, 65.4, 2.2, 2.2, 'tp', ''),
+        P(80, 64.5, 28, 3, 'silk', 'Raspberry Pi CM5', 8)
+      );
+    } else {
+      top.push(
+        P(68, 30, 55, 40, 'zone', ''),
+        P(72, 47, 22.6, 3.2, 'conn', 'DF40 J1'),
+        P(97, 47, 22.6, 3.2, 'conn', 'DF40 J2'),
+        P(78, 35, 36, 4, 'silk', 'CM5 FOOTPRINT 55 x 40', 8),
+        P(76, 57, 40, 4, 'silk', 'connector position per CM5 datasheet', 7)
+      );
+    }
+    top.push(
+      // display, camera, IO board
+      P(80, 8, 17, 4.5, 'fpc', 'DSI 22P'), P(100, 8.5, 6, 3.5, 'conn', '5V'),
+      P(121, 8, 4.5, 17, 'fpc', 'CSI'), P(62, 8, 10, 4, 'fpc', 'IO/LED'),
+      // power
+      P(8, 9.5, 24, 3, 'silk', 'POWER'),
+      P(10, 14, 3, 3, 'ic', ''), P(16, 13.5, 5, 5, 'ic', 'BQ'), P(24, 12, 7, 7, 'ind', '2u2'),
+      P(35, 14, 3, 3, 'ic', ''), P(41, 14, 6.4, 3.2, 'res', 'R010'), P(50, 12.5, 7, 7, 'ecap', ''),
+      P(16, 20, 2, 1.2, 'cap', ''), P(19, 20, 2, 1.2, 'cap', ''), P(22, 20, 2, 1.2, 'cap', ''), P(35, 18.5, 2, 1.2, 'cap', ''),
+      P(9, 26, 40, 3, 'silk', 'BUCK A    BUCK B    BUCK C', 7)
+    );
+    ['5VA', '5VB', '3V3'].forEach((lab, i) => {
+      top.push(P(9 + 15 * i, 31, 3, 2.5, 'ic', ''), P(13 + 15 * i, 28.5, 7, 7, 'ind', lab),
+        P(9 + 15 * i, 37, 2, 1.2, 'cap', ''), P(12 + 15 * i, 37, 2, 1.2, 'cap', ''), P(15 + 15 * i, 37, 2, 1.2, 'cap', ''), P(18 + 15 * i, 37, 2, 1.2, 'cap', ''));
+    });
+    for (let j = 0; j < 5; j++) top.push(P(10 + 7 * j, 43, 1.6, 1.6, 'tp', ''));
+    top.push(
+      P(8, 45.5, 40, 2.5, 'silk', 'VSYS 5VA 5VB 3V3 PG', 7),
+      P(10, 54, 15, 5, 'conn', 'BATT 6P'),
+      // hubs
+      P(130, 9.5, 24, 3, 'silk', 'USB HUBS'),
+      P(132, 14, 6, 6, 'ic', 'VL817'), P(144, 14, 6, 6, 'ic', '2514B'), P(156, 15, 3, 3, 'ic', ''),
+      P(133, 23, 3.2, 2.5, 'xtal', ''), P(145, 23, 3.2, 2.5, 'xtal', ''),
+      P(139, 14, 1.2, 2, 'cap', ''), P(139, 17, 1.2, 2, 'cap', ''), P(151, 14, 1.2, 2, 'cap', ''), P(151, 17, 1.2, 2, 'cap', ''),
+      // HAT header
+      P(124, 41, 51, 5, 'header', ''), P(124, 47, 30, 2.5, 'silk', '40-PIN HAT', 7),
+      // left edge
+      P(-1, 20, 9, 9, 'conn', 'USB-C'), P(-1, 32, 14, 13, 'conn', 'USB-A'), P(-1, 48, 12, 7, 'conn', '3.5'), P(-1, 60, 21, 16, 'conn', 'RJ45'),
+      // audio
+      P(25, 67.5, 14, 3, 'silk', 'AUDIO'), P(26, 72, 5, 5, 'ic', '8960'), P(32, 72, 1.2, 2, 'cap', ''), P(32, 75, 1.2, 2, 'cap', ''),
+      P(24, 82, 6, 4, 'conn', 'SPK'), P(32, 82, 6, 4, 'conn', 'SPK'),
+      // right edge
+      P(182, 21, 9, 9, 'conn', 'USB-C'), P(177, 35, 14, 15, 'conn', 'HDMI'), P(184, 55, 6, 4, 'conn', 'BOOT'), P(184, 63, 6, 4, 'conn', 'KILL'),
+      // DeckBus
+      P(44, 76, 22, 3, 'silk', 'DECKBUS L'), P(45, 80, 3, 3, 'ic', ''), P(50, 80, 2, 2, 'ic', ''), P(44, 88, 16, 4, 'fpc', 'BAY L'),
+      P(140, 78, 22, 3, 'silk', 'DECKBUS R'), P(140, 82, 3, 3, 'ic', ''), P(145, 82, 2, 2, 'ic', ''), P(150, 82, 4, 4, 'ic', ''), P(140, 90, 16, 4, 'fpc', 'BAY R'),
+      // keyboard, fan, RTC, title
+      P(100, 96, 12, 4, 'fpc', 'KEYBOARD'), P(126, 70, 7, 4, 'conn', 'FAN'), P(100, 74, 12, 12, 'ecap', 'RTC'),
+      P(112, 99.6, 44, 3, 'silk', 'KUROGANE K-7 MAINBOARD REV A', 8)
+    );
+
+    // ---------------- bottom side (mirrored)
+    const B = mk(75, 845, true);
+    const bottom = [].concat(holes(B));
+    for (let i = 0; i < 6; i++) for (let j = 0; j < 3; j++) bottom.push(B(74 + 8 * i, 34 + 12 * j, 2, 1.2, 'cap', ''));
+    bottom.push(
+      B(66, 74, 6, 22, 'conn', 'M.2 M'), B(72, 75, 42, 20, 'card', ''), B(78, 78, 9, 9, 'ic', 'CTRL'), B(91, 77, 13, 13, 'ic', 'NAND'),
+      B(104, 89, 9, 4, 'silk', 'NVMe', 8), B(112, 83, 4.6, 4.6, 'hole', ''),
+      B(128, 40, 6, 30, 'conn', 'M.2 B'), B(134, 41, 46, 28, 'card', ''), B(138, 44, 30, 22, 'shield', 'LTE M.2 3052'),
+      B(171, 44, 3, 3, 'conn', ''), B(171, 50, 3, 3, 'conn', ''), B(171, 56, 3, 3, 'conn', ''), B(168, 60, 12, 3, 'silk', 'M  D  G', 7),
+      B(178, 53, 4.6, 4.6, 'hole', ''),
+      B(110, 44, 13, 15, 'conn', 'nano SIM'), B(112, 62, 8, 8, 'ecap', '470u'),
+      B(20, 9.5, 50, 3, 'silk', 'BOTTOM: M.2 + SIM UNDER HATCH A', 8),
+      B(68, 30, 55, 40, 'zone', ''), B(78, 72, 36, 0.1, 'silk', '')
+    );
+    return { mask: this.props.mask ?? '#0f1011', top: top, bottom: bottom };
+  }
+}
+</script>
+</body>
+</html>

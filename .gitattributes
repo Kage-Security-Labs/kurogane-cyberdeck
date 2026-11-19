@@ -1,0 +1,21 @@
+# Normalise line endings (the repo lives on Windows)
+* text=auto
+*.kicad_pcb text eol=lf
+*.kicad_sch text eol=lf
+*.kicad_pro text eol=lf
+*.scad      text eol=lf
+*.py        text eol=lf
+*.md        text eol=lf
+*.csv       text eol=lf
+
+# Binary assets
+*.png  binary
+*.jpg  binary
+*.pdf  binary
+*.stl  binary
+*.step binary
+*.zip  binary
+
+# KiCad files diff better as text but are not merged automatically
+*.kicad_pcb merge=binary
+*.kicad_sch merge=binary

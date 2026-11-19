@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kurogane K-7 rear view and DeckBus module</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#ff8a1f}a:hover{color:#ffb066}
+</style>
+</helmet>
+<div style="position: relative; width: 960px; height: 1240px; background: #e9e6e1; font-family: 'Space Grotesk', system-ui, sans-serif; overflow: hidden">
+
+  <div style="position: absolute; left: 40px; top: 40px; font-size: 13px; letter-spacing: 2px; color: #4a4e54; font-weight: 700">REAR VIEW · 2 PX PER MM</div>
+  <div style="position: absolute; left: 520px; top: 40px; font-size: 13px; letter-spacing: 2px; color: #4a4e54; font-weight: 700">DECKBUS MODULE · INNER FACE · 3 PX PER MM</div>
+
+  <div style="position: absolute; left: 88px; top: 96px; width: 324px; height: 28px; display: flex; justify-content: space-between; align-items: flex-end">
+    <div style="width: 12px; height: 24px; background: #6d7178; border-radius: 2px"></div>
+    <div style="width: 12px; height: 24px; background: #6d7178; border-radius: 2px"></div>
+    <div style="width: 12px; height: 24px; background: #6d7178; border-radius: 2px"></div>
+    <div style="width: 12px; height: 24px; background: #6d7178; border-radius: 2px"></div>
+    <div style="width: 12px; height: 24px; background: #6d7178; border-radius: 2px"></div>
+    <div style="width: 36px; height: 20px; background: #141516; border-radius: 6px"></div>
+  </div>
+
+  <div style="position: absolute; left: 76px; top: 124px; width: 424px; height: 504px; background: #1b1d1f; border-radius: 18px; box-shadow: inset 0 0 0 3px #2c2f33, 0 14px 30px rgba(0,0,0,0.22)">
+    <div style="position: absolute; left: 20px; top: 20px; width: 384px; height: 226px; background: #8d939a; border-radius: 10px; box-shadow: inset 0 0 0 2px #6d7178">
+      <div style="position: absolute; left: 24px; top: 24px; width: 336px; height: 120px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 10px">
+        <sc-for list="{{fins}}" as="f" hint-placeholder-count="12">
+          <div style="background: #4a4e54; border-radius: 4px"></div>
+        </sc-for>
+      </div>
+      <div style="position: absolute; left: 24px; bottom: 18px; font-size: 13px; color: #141516; font-weight: 700">6061 heat plate over CM5</div>
+      <div style="position: absolute; right: 24px; bottom: 18px; font-size: 11px; color: #26292c">blower exhaust ↑ top vents</div>
+    </div>
+
+    <div style="position: absolute; left: 20px; top: 262px; width: 184px; height: 96px; border-radius: 8px; box-shadow: inset 0 0 0 2px #34383c; padding: 12px; box-sizing: border-box; color: #c9ccd0; font-size: 12px; line-height: 17px">
+      <div style="color: #ff8a1f; font-weight: 700">HATCH A</div>
+      <div>M.2 NVMe 2242</div>
+      <div>M.2 LTE/5G + nano-SIM</div>
+    </div>
+    <div style="position: absolute; left: 220px; top: 262px; width: 184px; height: 96px; border-radius: 8px; box-shadow: inset 0 0 0 2px #34383c; padding: 12px; box-sizing: border-box; color: #c9ccd0; font-size: 12px; line-height: 17px">
+      <div style="color: #ff8a1f; font-weight: 700">HATCH B</div>
+      <div>40-pin HAT bay</div>
+      <div>65 × 56 mm, 11 mm stack</div>
+    </div>
+
+    <div style="position: absolute; left: 20px; top: 374px; width: 384px; height: 110px; border-radius: 10px; background: #161718; box-shadow: inset 0 0 0 2px #34383c; padding: 14px; box-sizing: border-box; color: #c9ccd0; font-size: 12px; line-height: 17px">
+      <div style="color: #ff8a1f; font-weight: 700">BATTERY DOOR + KICKSTAND</div>
+      <div>2S2P 18650 pack, 135 × 40 × 19 mm</div>
+      <div>Stand folds out from the lower edge</div>
+      <div style="position: absolute; left: 14px; right: 14px; bottom: 10px; height: 4px; background: #34383c; border-radius: 2px"></div>
+    </div>
+
+    <div style="position: absolute; left: 10px; top: 14px; width: 8px; height: 8px; border-radius: 4px; background: #3a3e43"></div>
+    <div style="position: absolute; right: 10px; top: 14px; width: 8px; height: 8px; border-radius: 4px; background: #3a3e43"></div>
+    <div style="position: absolute; left: 10px; bottom: 14px; width: 8px; height: 8px; border-radius: 4px; background: #3a3e43"></div>
+    <div style="position: absolute; right: 10px; bottom: 14px; width: 8px; height: 8px; border-radius: 4px; background: #3a3e43"></div>
+  </div>
+  <div style="position: absolute; left: 64px; top: 360px; width: 12px; height: 220px; background: #2c2f33; border-radius: 4px 0 0 4px"></div>
+  <div style="position: absolute; left: 500px; top: 360px; width: 12px; height: 220px; background: #2c2f33; border-radius: 0 4px 4px 0"></div>
+  <div style="position: absolute; left: 108px; top: 622px; width: 360px; height: 64px; background: #161718; border-radius: 0 0 18px 18px"></div>
+
+  <div style="position: absolute; left: 76px; top: 712px; width: 424px; color: #4a4e54; font-size: 12px; line-height: 18px">Side rails (dark strips) take the DeckBus modules. Hatches use M2.5 screws into brass inserts, so storage, modem and HAT can be swapped without opening the shell.</div>
+
+  <div style="position: absolute; left: 560px; top: 96px; width: 102px; height: 330px; background: #1f2123; border-radius: 10px; box-shadow: inset 0 0 0 2px #34383c">
+    <div style="position: absolute; left: 0; top: 0; width: 10px; height: 330px; background: #2c2f33; border-radius: 10px 0 0 10px"></div>
+    <div style="position: absolute; right: 0; top: 0; width: 10px; height: 330px; background: #2c2f33; border-radius: 0 10px 10px 0"></div>
+    <div style="position: absolute; left: 33px; top: 128px; width: 36px; height: 80px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(10, minmax(0, 1fr)); column-gap: 6px; row-gap: 2px">
+      <sc-for list="{{pads}}" as="p" hint-placeholder-count="20">
+        <div style="background: #d4a64a; border-radius: 1px"></div>
+      </sc-for>
+    </div>
+    <div style="position: absolute; left: 0; top: 220px; width: 102px; text-align: center; color: #c9ccd0; font-size: 10px">20 gold pads</div>
+    <div style="position: absolute; left: 0; top: 24px; width: 102px; text-align: center; color: #ff8a1f; font-size: 10px; font-weight: 700">ID EEPROM 0x50</div>
+    <div style="position: absolute; left: 0; bottom: 18px; width: 102px; text-align: center; color: #8a8f96; font-size: 10px">M3 thumbscrew</div>
+  </div>
+  <div style="position: absolute; left: 560px; top: 440px; width: 102px; color: #4a4e54; font-size: 11px; line-height: 16px">Sled 34 × 110 × 30 mm. Dovetail rails both sides.</div>
+
+  <div style="position: absolute; left: 690px; top: 96px; width: 230px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px">
+    <sc-for list="{{pins}}" as="p" hint-placeholder-count="20">
+      <div style="display: flex; align-items: center; gap: 6px; height: 26px; padding: 0 6px; background: #f6f4f0; border-radius: 4px; box-shadow: inset 3px 0 0 {{p.c}}; font-size: 11px; color: #141516">
+        <div style="font-family: 'JetBrains Mono', monospace; color: #4a4e54; width: 16px">{{p.n}}</div>
+        <div>{{p.t}}</div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="position: absolute; left: 690px; top: 410px; width: 230px; display: flex; flex-direction: column; gap: 6px; font-size: 11px; color: #4a4e54">
+    <div style="display: flex; gap: 8px; align-items: center"><div style="width: 12px; height: 12px; background: #ff8a1f; border-radius: 2px"></div><div>Power</div></div>
+    <div style="display: flex; gap: 8px; align-items: center"><div style="width: 12px; height: 12px; background: #1f7a8c; border-radius: 2px"></div><div>Data</div></div>
+    <div style="display: flex; gap: 8px; align-items: center"><div style="width: 12px; height: 12px; background: #8a8f96; border-radius: 2px"></div><div>Ground / control</div></div>
+  </div>
+
+  <div style="position: absolute; left: 520px; top: 560px; width: 400px; display: flex; flex-direction: column; gap: 10px">
+    <div style="font-size: 13px; letter-spacing: 2px; color: #4a4e54; font-weight: 700">MODULE IDEAS</div>
+    <sc-for list="{{mods}}" as="m" hint-placeholder-count="6">
+      <div style="display: flex; justify-content: space-between; padding: 10px 12px; background: #1b1d1f; border-radius: 8px; color: #e8e8e8; font-size: 13px">
+        <div>{{m.a}}</div>
+        <div style="color: #ff8a1f; font-size: 11px">{{m.b}}</div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="position: absolute; left: 48px; top: 1110px; width: 864px; display: flex; justify-content: space-between; align-items: flex-end">
+    <div>
+      <div style="font-size: 26px; font-weight: 700; color: #141516">Kurogane K-7 rear + DeckBus v1</div>
+      <div style="font-size: 14px; color: #4a4e54">Everything that wears out or gets upgraded is behind a hatch or on a rail</div>
+    </div>
+    <div style="font-size: 12px; color: #4a4e54; text-align: right; line-height: 18px">Pogo block: 2 × 10, 2.54 mm pitch<br>Hot-plug via MOD_DET# delay</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":960,"height":1240}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const P = '#ff8a1f', D = '#1f7a8c', G = '#8a8f96';
+    const list = [
+      ['1','GND',G],['2','GND',G],['3','VSYS out',P],['4','VSYS out',P],['5','+5V out',P],['6','+5V out',P],
+      ['7','+3V3 out',P],['8','GND',G],['9','USB2 D+',D],['10','USB2 D−',D],['11','GND',G],['12','I2C SDA',D],
+      ['13','I2C SCL',D],['14','UART TX',D],['15','UART RX',D],['16','GPIO A',D],['17','GPIO B / IRQ',D],['18','MOD_DET#',G],
+      ['19','VCHG_IN',P],['20','GND',G]
+    ];
+    const order = [];
+    for (let i = 0; i < list.length; i += 2) { order.push(list[i]); order.push(list[i + 1]); }
+    return {
+      fins: Array.from({ length: 12 }, (_, i) => ({ i: i })),
+      pads: Array.from({ length: 20 }, (_, i) => ({ i: i })),
+      pins: order.map((p) => ({ n: p[0], t: p[1], c: p[2] })),
+      mods: [
+        { a: 'GNSS (u-blox MAX-M10S)', b: 'UART + PPS' },
+        { a: 'LoRa / Meshtastic (SX1262)', b: 'USB' },
+        { a: 'RTL-SDR v4', b: 'USB' },
+        { a: 'Extra battery 2S1P', b: 'VCHG_IN' },
+        { a: 'Wi-Fi audit, 2 × SMA', b: 'USB' },
+        { a: 'Solar / 12 V DC in', b: 'VCHG_IN' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
